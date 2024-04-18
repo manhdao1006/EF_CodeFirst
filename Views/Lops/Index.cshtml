@@ -1,0 +1,22 @@
+﻿@model List<EF_CodeFirst.Models.Lop>
+@{
+    ViewBag.Title = "Lops";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Lops</h2>
+<table class="table">
+    <tr>
+        <th>Mã lớp</th>
+        <th>Tên lớp</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Khoa.Name</td>
+        </tr>
+    }
+</table>
+
